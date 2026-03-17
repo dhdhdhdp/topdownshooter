@@ -9,6 +9,6 @@ public class  PlayerMovemnet: MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        transform.Translate(new Vector3(x, y) * speed * Time.deltaTime);
+        transform.Translate(new Vector2(x, y) * speed * Time.deltaTime);
     }
 }
