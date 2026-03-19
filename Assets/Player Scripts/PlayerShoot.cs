@@ -1,35 +1,26 @@
 using UnityEngine;
 
-public class EnemyShooting : MonoBehaviour
+public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
 
-    public float shootCooldown = 1.5f;
-    private float timer;
-
-    public Transform player;
-
-    void Update()
+    private void Update()
     {
-        if (player == null) return;
-
-        timer += Time.deltaTime;
-
-        if (timer >= shootCooldown)
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-            timer = 0f;
         }
     }
 
     void Shoot()
     {
-        Vector2 direction = (player.position - firePoint.position).normalized;
+        Vector2 direction = firePoint.right;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.SetDirection(direction);
+        bulletScript.targetTag = "Enemy";
     }
 }
