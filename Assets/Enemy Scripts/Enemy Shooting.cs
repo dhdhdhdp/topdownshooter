@@ -33,7 +33,7 @@ public class EnemyShooting : MonoBehaviour
     {
         Vector2 direction = (player.position - firePoint.position).normalized;
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.SetDirection(direction);

@@ -17,7 +17,7 @@ public class PlayerShoot : MonoBehaviour
     {
         Vector2 direction = firePoint.up;
 
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
         Bullet bulletScript = bullet.GetComponent<Bullet>();
         bulletScript.SetDirection(direction);
