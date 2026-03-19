@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
 
         Vector2 lookDirection = player.position - transform.position;
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Euler(0, 0, angle -90);
 
         float distance = Vector2.Distance(rb.position, player.position);
 

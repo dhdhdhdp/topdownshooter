@@ -15,7 +15,7 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
-        Vector2 direction = firePoint.right;
+        Vector2 direction = firePoint.up;
 
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
 

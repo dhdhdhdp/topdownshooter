@@ -12,6 +12,6 @@ public class PlayerAim : MonoBehaviour
         ///richting zetten in een hoek(rotatie)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         /// Draait de speler naar die hoek
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Euler(0, 0, angle -90);
     }
 }
