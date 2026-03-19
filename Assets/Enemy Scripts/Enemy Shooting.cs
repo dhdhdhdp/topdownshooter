@@ -7,18 +7,25 @@ public class EnemyShooting : MonoBehaviour
     public Transform player;
 
     public float shootCooldown = 1.5f;
+    public float shootingRange = 8f;
+
     private float timer;
 
     void Update()
     {
         if (player == null) return;
 
-        timer += Time.deltaTime;
+        float distance = Vector2.Distance(transform.position, player.position);
 
-        if (timer >= shootCooldown)
+        if (distance <= shootingRange)
         {
-            Shoot();
-            timer = 0f;
+            timer += Time.deltaTime;
+
+            if (timer >= shootCooldown)
+            {
+                Shoot();
+                timer = 0f;
+            }
         }
     }
 
