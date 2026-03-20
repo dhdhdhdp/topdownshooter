@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Arena 1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 767af7e14c286c149a40378fba1c7057
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: 301fc8973fe7503478b172b6f8ff6b6c
+  - enabled: 1
+    path: Assets/Scenes/ArenaKeuze.unity
+    guid: 9a971cf8d91a97b4591b0829d042e6fc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
