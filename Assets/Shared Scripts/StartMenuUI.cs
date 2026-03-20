@@ -5,7 +5,7 @@ public class StartMenuUI : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("ArenaKeuzen");
+        SceneManager.LoadScene("ArenaKeuze");
     }
 
     public void QuitGame()
