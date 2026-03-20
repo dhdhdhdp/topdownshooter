@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour
 
     private Vector2 direction;
     private Rigidbody2D rb;
+    private bool hasHit = false;
 
     void Awake()
     {
@@ -28,8 +29,19 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hasHit) return;
+
+        if (collision.CompareTag("Wall"))
+        {
+            hasHit = true;
+            Destroy(gameObject);
+            return;
+        }
+
         if (collision.CompareTag(targetTag))
         {
+            hasHit = true;
+
             EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
